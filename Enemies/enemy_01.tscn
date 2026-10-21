@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dinmwhlm15a44"]
+
+[ext_resource type="Texture2D" uid="uid://cnnx2bmq6wujx" path="res://Assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_ook3p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j84r"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbddj"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heuuf"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tewmu"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqd8j"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtlg7"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htfsa"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgu7m"]
+atlas = ExtResource("1_ook3p")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nopit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j84r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbddj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_heuuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tewmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqd8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtlg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htfsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgu7m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpn7x"]
+size = Vector2(14, 15)
+
+[node name="Path2D" type="Node2D" unique_id=1836300328]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1590254796]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_nopit")
+frame_progress = 0.1250573
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1705202340]
+position = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=335343851]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_lpn7x")
