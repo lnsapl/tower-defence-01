@@ -74,6 +74,7 @@ size = Vector2(14, 15)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1590254796]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_nopit")
+autoplay = "default"
 frame_progress = 0.1250573
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1705202340]
